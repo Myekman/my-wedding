@@ -37,6 +37,7 @@ class ProfileDetail(APIView):
         )
         return Response(serializer.data)
 
+# ------------------------------------------------------------------redigera profilen
     def put(self, request, pk):
         profile = self.get_object(pk)
         serializer = ProfileSerializer(
