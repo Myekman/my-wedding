@@ -1,4 +1,5 @@
 from django.db.models import Count
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, filters, permissions
 from mywedding.permissions import IsOwnerOrReadOnly
 from .models import Post
@@ -17,8 +18,30 @@ class PostList(generics.ListCreateAPIView):
         comments_count=Count('comment', distinct=True)
     ).order_by('-created_at')
 
-    filter_backends = [filters.OrderingFilter]
-    ordering_fields = ['likes_count', 'comments_count', 'likes__created_at']
+    filter_backends = [
+        filters.OrderingFilter,
+        filters.SearchFilter,
+        DjangoFilterBackend,
+    ]
+    filterset_fields = [
+        #user feed
+        'owner__followed__owner__profile',
+        #user likes posts
+        'likes__owner__profile',
+        #user posts
+        'owner__profile',
+    ]
+    search_fields = [
+        'owner__username',
+        'title',
+    ]
+    ordering_fields = [
+        'posts_count',
+        'followers_count',
+        'following_count',
+        'owner__following__created_at',
+        'owner__followed__created_at',
+    ]
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
