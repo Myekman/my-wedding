@@ -65,7 +65,7 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-myekman-mywedding-nyh1urjz903.ws-eu105.gitpod.io', 'my-wedding-planner-300e07d6f1f5.herokuapp.com']
 
