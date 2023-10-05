@@ -1,4 +1,5 @@
 from django.db.models import Count
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, filters
 from .models import Profile
 from .serializers import ProfileSerializer
@@ -19,10 +20,13 @@ class ProfileList(generics.ListAPIView):
     filter_backends = [
         filters.OrderingFilter,
         filters.SearchFilter,
+        DjangoFilterBackend,
     ]
-    search_fields = [
-        'owner__username',
-        'title',
+    filterset_fields = [
+        # listar alla följade till en användare
+        'owner__following__followed__profile',
+        # listar alla användare en användare följer
+        'owner__followed__owner__profile'
     ]
     ordering_fields = [
         'posts_count',
