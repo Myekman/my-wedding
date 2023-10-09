@@ -2,3 +2,7 @@
     background-color: #fafafa;
     border: 1px solid #dadadf;
   }
+
+.Active i {
+  color: #FA9383;
+}

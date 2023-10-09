@@ -1,7 +1,8 @@
 import styles from '../src/App.module.css';
 import NavBar from './components/NavBar';
 import Container from "react-bootstrap/Container";
-
+import NotFound
+ from './components/NotFound';
 import { Route, Switch } from "react-router-dom";
 
 
@@ -14,7 +15,7 @@ function App() {
           <Route exact path="/" render={() => <h1>Home page</h1>} />
           <Route exact path="/signin" render={() => <h1>Sign in</h1>} />
           <Route exact path="/signup" render={() => <h1>Sign up</h1>} />
-          <Route render={() => <p>Page not found!</p>} />
+          <Route render = {() => <NotFound/>} />
         </Switch>
       </Container>
     </div>

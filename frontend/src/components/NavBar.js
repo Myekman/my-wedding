@@ -19,13 +19,24 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto text-left">
-            <NavLink to="/">
+            <NavLink
+                // the 'exact' prop prevent the home icon to be active when leaving the homepage
+                exact
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+                to="/">
                 <i className = "fas fa-home"></i>Home
             </NavLink>
-            <NavLink to="/signin">
+            <NavLink 
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+                to="/signin">
                 <i className = "fas fa-sign-in"></i>Sign in
             </NavLink>
-            <NavLink to="/signup">
+            <NavLink
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+                to="/signup">
                 <i className = "fas fa-user-plus"></i>Sign up
             </NavLink>
             </Nav>
