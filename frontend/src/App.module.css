@@ -23,8 +23,9 @@
   width: 100%;
 }
 
+
 .Image {
-  max-height: 40vh;
+  max-height: 50vh;
   max-width: 100%;
   object-fit: contain;
 }
@@ -62,10 +63,6 @@ i:hover {
   cursor: pointer;
   transition: color ease-in-out 0.3s;
   color: #FFDCDC;
-}
-
-.BiggerText {
-  font-size: 30px;
 }
 
 figure {

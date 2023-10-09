@@ -1,18 +1,24 @@
-.Row {
+/* .Row {
     height: calc(100vh - 81px);
+} */
+
+.Row {
+    padding-top: 150px;
 }
+
 .Input {
-    background: #ffffff;
-    border: 1px solid #f0f1f9;
+    background-color: #f8f8f8;
+    border: 2px solid  #FFDCDC;
     box-sizing: border-box;
     border-radius: 2px;
-    color: #7177a1;
+    color: #032002;
     text-align: center;
     padding: 10px;
 }
 
 .Form {
-    background-color: #D1DFE2;
+    background-color: #f8f8f8;
+    height: 350px;
 }
 
 
@@ -36,7 +42,7 @@
 }
 
 .Link span {
-    color: #FFC9C9;
+    color: #032002;
     
 }
 

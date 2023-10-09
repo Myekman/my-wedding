@@ -50,15 +50,17 @@ const SignUpForm = () => {
                 className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}>
                 Sign up
             </Button>
-        </Form>
 
-        </Container>
-        {/* <Container className={`mt-3 ${appStyles.Content}`}>
+            <Container className={`mt-3 ${appStyles.Content}`}>
             <Link className={styles.Link} to="/signin">
                 <p> Already have an account?</p>
-                <span className={appStyles.BiggerText}>Sign in</span>
+                <span>Sign in</span>
             </Link>
-        </Container> */}
+            </Container>
+        </Form>
+    
+        </Container>
+        
       </Col>
       <Col
         md={6}
@@ -72,7 +74,7 @@ const SignUpForm = () => {
         />
       </Col>
     </Row>
-  
+
   );
 };
 
