@@ -7,8 +7,14 @@ import appStyles from "../../App.module.css";
 import SignUpImage from "../../assets/sign-up.jpg";
 
 import Alert from 'react-bootstrap/Alert';
-import { Form, Button, Image, Col, Row, Container } from "react-bootstrap";
-import { axiosReq } from "../../api/axiosDefaults";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+
+import axios from "axios";
 
 const SignUpForm = () => {
   const [signUpData, setSignUpData] = useState({
@@ -32,7 +38,7 @@ const SignUpForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axiosReq.post("/dj-rest-auth/registration/", signUpData);
+      await axios.post("/dj-rest-auth/registration/", signUpData);
       history.push("/signin");
     } catch (err) {
       setErrors(err.response?.data);
