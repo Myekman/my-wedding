@@ -9,8 +9,8 @@ axios.defaults.withCredentials = true;
 
  // Setting a baseURL before you reach deployment will cause errors
 
-
-// axios.defaults.baseURL = "api/"
+// I added this base URL for you to solve the url issue from earlier
+axios.defaults.baseURL = "https://8000-myekman-mywedding-nyh1urjz903.ws-eu105.gitpod.io/"
 // axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
 // axios.defaults.withCredentials = true;
 
