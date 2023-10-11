@@ -11,6 +11,7 @@ import "./api/axiosDefaults";
 import PostPage from './pages/posts/PostPage';
 import PostsPage from './pages/posts/PostsPage';
 import { useCurrentUser } from './context/CurrentUserContext';
+import PostEditForm from './pages/posts/PostEditForm';
 
 function App() {
   const currentUser = useCurrentUser();
@@ -51,6 +52,7 @@ function App() {
               <Route exact path="/signin" render={() => <SigninForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/posts/create" render={() => <PostCreateForm />} />
+              <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
               <Route exact path="/posts/:id" render = {() => <PostPage />} />
               <Route render = {() => <NotFound/>} />
             </Switch>
