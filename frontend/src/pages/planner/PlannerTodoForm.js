@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Container, Form, Button, Alert } from "react-bootstrap";
-
+import { Container, Form, Button, Alert, Row, Col } from "react-bootstrap";
+import { axiosReq } from "../../api/axiosDefaults";
+import styles from "../../styles/PlannerTodo.module.css";
 
 function PlannerTodoForm({ setItems }) {
     const [errors, setErrors] = useState();
@@ -13,6 +14,20 @@ function PlannerTodoForm({ setItems }) {
     });
     const { todo, description , price } = setTodoData;
 
+    const handleChange = (event) => {
+        setTodoData({
+          ...todoData,
+          [event.target.name]: event.target.value,
+        });
+      };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        console.log(todoData);
+
+    }
+
 
     const textFields = (
         <div className="text-center">
@@ -22,7 +37,7 @@ function PlannerTodoForm({ setItems }) {
               type="text"
               name="todo"
               value={todo}
-            //   onChange={handleChange}
+              onChange={handleChange}
             //   className="form-control-sm"
             />
           </Form.Group>
@@ -38,7 +53,7 @@ function PlannerTodoForm({ setItems }) {
               type="text"
               name="description "
               value={description}
-            //   onChange={handleChange}
+            //   onChange={(e) => console.log(e.target.value)}
             //   className="form-control-sm"
             />
           </Form.Group>
@@ -54,7 +69,7 @@ function PlannerTodoForm({ setItems }) {
               type="number"
               name="price"
               value={price}
-            //   onChange={handleChange}
+            //   onChange={(e) => console.log(e.target.value)}
             //   className="form-control-sm"
             />
           </Form.Group>
@@ -79,9 +94,30 @@ function PlannerTodoForm({ setItems }) {
     
       return (
         <Container>
-            <Form>
+            <Form onSubmit={handleSubmit}>
             {textFields}
             </Form>
+                <div className={styles.TodosWrapper}>
+                <Row>
+                        <Col xs={4} className="text-center">
+                        <div className="TodosList">
+                            <h3 className="TodosTitle">Todos</h3>
+                        </div>
+                        </Col>
+                    
+                        <Col xs={4} className="text-center">
+                        <div className="TodosList">
+                            <h3 className="TodosTitle">Todos</h3>
+                        </div>
+                        </Col>
+                    
+                        <Col xs={4} className="text-center">
+                        <div className="TodosList">
+                            <h3 className="TodosTitle">Todos</h3>
+                        </div>
+                        </Col>
+                </Row>
+                </div>
         </Container>
       )
 
