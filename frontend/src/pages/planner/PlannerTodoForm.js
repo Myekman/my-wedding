@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Form, Button, Alert, Row, Col } from "react-bootstrap";
 import { axiosReq } from "../../api/axiosDefaults";
 import styles from "../../styles/PlannerTodo.module.css";
@@ -6,27 +6,22 @@ import styles from "../../styles/PlannerTodo.module.css";
 function PlannerTodoForm({ setItems }) {
     const [errors, setErrors] = useState();
 
-    const [todoData, setTodoData] = useState({
-        todo: "",
-        description: "",
-        price: "",
-        
-    });
-    const { todo, description , price } = setTodoData;
+    const [todos, setTodos] = useState([]);
+    const [inprogress, setInProgress] = useState([]);
+    const [completed, setCompleted] = useState([]);
 
-    const handleChange = (event) => {
-        setTodoData({
-          ...todoData,
-          [event.target.name]: event.target.value,
-        });
-      };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-
-        console.log(todoData);
-
+    const [input, setInput] = useState('');
+    const addTodo = () => {
+      const todo = {
+        id: Math.floor(Math.random() * 1000),
+        text: input
+      }
+      setTodos([todo, ...todos]);
     }
+
+    // useEffect(() => {
+
+    // }, [todos])
 
 
     const textFields = (
@@ -35,9 +30,9 @@ function PlannerTodoForm({ setItems }) {
             <Form.Label>Todo</Form.Label>
             <Form.Control
               type="text"
-              name="todo"
-              value={todo}
-              onChange={handleChange}
+              name="title"
+              // value={title}
+              onChange={(e) => setInput(e.target.value)}
             //   className="form-control-sm"
             />
           </Form.Group>
@@ -47,44 +42,10 @@ function PlannerTodoForm({ setItems }) {
             </Alert>
           ))}
     
-          <Form.Group>
-            <Form.Label>Description</Form.Label>
-            <Form.Control
-              type="text"
-              name="description "
-              value={description}
-            //   onChange={(e) => console.log(e.target.value)}
-            //   className="form-control-sm"
-            />
-          </Form.Group>
-          {errors?.description?.map((message, idx) => (
-            <Alert variant="warning" key={idx}>
-              {message}
-            </Alert>
-          ))}
-
-          <Form.Group>
-            <Form.Label>Price</Form.Label>
-            <Form.Control
-              type="number"
-              name="price"
-              value={price}
-            //   onChange={(e) => console.log(e.target.value)}
-            //   className="form-control-sm"
-            />
-          </Form.Group>
-          {errors?.price?.map((message, idx) => (
-            <Alert variant="warning" key={idx}>
-              {message}
-            </Alert>
-          ))}
-    
-          <Button type="submit">
+          <Button type="button" onClick={() => addTodo()}>
             Add Todo!
           </Button>
           <Button
-            // className={`${btnStyles.Button} ${btnStyles.Green}`}
-            // onClick={handleCancel}
           >
             Cancel
           </Button>
@@ -94,7 +55,7 @@ function PlannerTodoForm({ setItems }) {
     
       return (
         <Container>
-            <Form onSubmit={handleSubmit}>
+            <Form>
             {textFields}
             </Form>
                 <div className={styles.TodosWrapper}>
@@ -102,18 +63,24 @@ function PlannerTodoForm({ setItems }) {
                         <Col xs={4} className="text-center">
                         <div className="TodosList">
                             <h3 className="TodosTitle">Todos</h3>
+                            {todos.map((item) => 
+                            <div className="TodoCard" key={item.id}>
+                            <p className="CardText">{item.text}</p>
+                            <i className="fa-solid fa-check"></i>
+                            </div>
+                            )}
                         </div>
                         </Col>
                     
                         <Col xs={4} className="text-center">
                         <div className="TodosList">
-                            <h3 className="TodosTitle">Todos</h3>
+                            <h3 className="TodosTitle">In progress</h3>
                         </div>
                         </Col>
                     
                         <Col xs={4} className="text-center">
                         <div className="TodosList">
-                            <h3 className="TodosTitle">Todos</h3>
+                            <h3 className="TodosTitle">Completed</h3>
                         </div>
                         </Col>
                 </Row>
