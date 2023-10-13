@@ -1,27 +1,44 @@
 import React, { useEffect, useState } from "react";
-import { Container, Form, Button, Alert, Row, Col } from "react-bootstrap";
-import { axiosReq } from "../../api/axiosDefaults";
+import { Container, Form, Button, Row, Col } from "react-bootstrap";
+// import { axiosReq } from "../../api/axiosDefaults";
 import styles from "../../styles/PlannerTodo.module.css";
+import { axiosReq } from "../../api/axiosDefaults";
+import { useParams } from "react-router-dom";
 
-function PlannerTodoForm({ setItems }) {
-    const [errors, setErrors] = useState();
+function PlannerTodoForm() {
+    const { id } = useParams();
+    // const [errors, setErrors] = useState();
 
+    const [input, setInput] = useState("");
     const [todos, setTodos] = useState([]);
-    const [inprogress, setInProgress] = useState([]);
-    const [completed, setCompleted] = useState([]);
+    // const [inprogress, setInProgress] = useState([]);
+    // const [completed, setCompleted] = useState([]);
 
-    const [input, setInput] = useState('');
     const addTodo = () => {
       const todo = {
         id: Math.floor(Math.random() * 1000),
         text: input
+
       }
-      setTodos([todo, ...todos]);
-    }
+    setTodos([todo, ...todos]);
 
-    // useEffect(() => {
+    setInput("");
+};
 
-    // }, [todos])
+    useEffect(() => {
+      const handleMount = async () => {
+        try {
+          const [{ data: todos }] = await Promise.all([
+            axiosReq.get(`/todolist/?todos=${id}`),
+          ]);
+          setTodos(todos);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+  
+      handleMount();
+    }, [id]);
 
 
     const textFields = (
@@ -36,11 +53,11 @@ function PlannerTodoForm({ setItems }) {
             //   className="form-control-sm"
             />
           </Form.Group>
-          {errors?.todo?.map((message, idx) => (
+          {/* {errors?.todo?.map((message, idx) => (
             <Alert variant="warning" key={idx}>
               {message}
             </Alert>
-          ))}
+          ))} */}
     
           <Button type="button" onClick={() => addTodo()}>
             Add Todo!
