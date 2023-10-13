@@ -120,6 +120,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
+
 CSRF_TRUSTED_ORIGINS = (
     'https://8000-myekman-mywedding-nyh1urjz903.ws-eu105.gitpod.io', 'https://my-wedding-planner-300e07d6f1f5.herokuapp.com'
 )

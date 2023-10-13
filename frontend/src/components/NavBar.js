@@ -9,6 +9,7 @@ import logo from "../assets/logo.png"
 import { useCurrentUser, useSetCurrentUser } from '../context/CurrentUserContext';
 import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 import axios from "axios";
+import { removeTokenTimestamp } from '../utils/utils';
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
@@ -20,6 +21,7 @@ const NavBar = () => {
         try {
           await axios.post("dj-rest-auth/logout/");
           setCurrentUser(null);
+          removeTokenTimestamp()
         } catch (err) {
           console.log(err);
         }
@@ -34,15 +36,6 @@ const NavBar = () => {
             <i className="far fa-plus-square"></i>Add post
         </NavLink>
     );
-    // const addTodoIcon = (
-    //     <NavLink
-    //     className={styles.NavLink}
-    //     activeClassName={styles.Active}
-    //     to="todos/create"
-    //     >
-    //      <i className="far fa-plus-square"></i>Add todo
-    //     </NavLink>
-    // );
     const loggedInIcons = (
         <>
         <NavLink
