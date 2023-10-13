@@ -17,9 +17,10 @@ import ProfilePage from './pages/profiles/ProfilePage';
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import TodoForm from "./pages/todos/TodoForm";
 
-import TodoCreateForm from './pages/todo/TodoCreateForm';
-import PlannerTodoForm from './pages/todo/PlannerTodoForm';
+// import TodoCreateForm from './pages/todo/TodoCreateForm';
+// import PlannerTodoForm from './pages/todo/PlannerTodoForm';
 
 
 
@@ -65,9 +66,10 @@ function App() {
               <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
               <Route exact path="/posts/:id" render = {() => <PostPage />} />
               <Route exact path="/profiles/:id" render = {() => <ProfilePage />} />
-
-              <Route exact path="/todolist" render={() => <PlannerTodoForm/> } />
-              <Route exact path="/todoplanner" render={() => <TodoCreateForm /> } />
+              
+              <Route exact path="/todos/create" render = {() => <TodoForm />} />
+              {/* <Route exact path="/todos" render={() => <PlannerTodoForm/> } /> */}
+              {/* <Route exact path="/todos" render={() => <TodoCreateForm /> } /> */}
 
               <Route
                 exact

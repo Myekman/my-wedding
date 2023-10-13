@@ -7,8 +7,6 @@ class TodoSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
     created_at = serializers.SerializerMethodField()
     updated_at = serializers.SerializerMethodField()
-    completed = serializers.BooleanField(required=False)
-
 
     def get_is_owner(self, obj):
         request = self.context['request']

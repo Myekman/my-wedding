@@ -34,8 +34,24 @@ const NavBar = () => {
             <i className="far fa-plus-square"></i>Add post
         </NavLink>
     );
+    // const addTodoIcon = (
+    //     <NavLink
+    //     className={styles.NavLink}
+    //     activeClassName={styles.Active}
+    //     to="todos/create"
+    //     >
+    //      <i className="far fa-plus-square"></i>Add todo
+    //     </NavLink>
+    // );
     const loggedInIcons = (
         <>
+        <NavLink
+            className={styles.NavLink}
+            activeClassName={styles.Active}
+            to="/todos/create"
+        >
+         <i className="far fa-plus-square"></i>Add todo
+        </NavLink>
         <NavLink
             className={styles.NavLink}
             activeClassName={styles.Active}
