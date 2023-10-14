@@ -18,6 +18,7 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import TodoForm from "./pages/todos/TodoForm";
+import TodosPage from './pages/todos/TodosPage';
 
 // import PlannerTodoForm from './pages/todos/PlannerTodoForm';
 // import TodoCreateForm from './pages/todo/TodoCreateForm';
@@ -69,9 +70,7 @@ function App() {
               <Route exact path="/profiles/:id" render = {() => <ProfilePage />} />
               
               <Route exact path="/todos/create" render = {() => <TodoForm />} />
-
-              {/* <Route exact path="/todos" render={() => <PlannerTodoForm /> } /> */}
-              {/* <Route exact path="/todos" render={() => <TodoCreateForm /> } /> */}
+              <Route exact path="/todos/:id" render = {() => <TodosPage /> } />
 
               <Route
                 exact

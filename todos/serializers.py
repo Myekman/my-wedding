@@ -5,6 +5,7 @@ from todos.models import Todo
 class TodoSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
+    profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     created_at = serializers.SerializerMethodField()
     updated_at = serializers.SerializerMethodField()
 
@@ -21,5 +22,6 @@ class TodoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Todo
         fields = [
-            '__all__'
+             'id', 'owner', 'is_owner', 'profile_id',
+             'title', 'content',  'created_at', 'updated_at'
         ]

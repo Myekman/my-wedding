@@ -20,45 +20,38 @@
 // };
 
 // return (
-//     <Container>
-//         <h1>Plan my wedding</h1>
-//         <input
-//             type="text"
-//             value={input}
-//             onChange={(e) => setInput(e.target.value)}
-//         />
-//         <button onClick={() => addTodo(input)}>Add todo</button>
+    // <Container>
 
-//         <div>
-//             <Row>
-//                 <Col xs={4} className="text-center">
-//                     <div className="TodosList">
-//                         <h3 className="TodosTitle">Todos</h3>
-//                     <ul>
-//                         {todolist.map((todo) => (
-//                             <li key={todo.id}>
-//                                 {todo.todo}
-//                             </li>
-//                         ))}
-//                     </ul>
-//                     </div>
-//                 </Col>
+    //     <div>
+    //         <Row>
+    //             <Col xs={4} className="text-center">
+    //                 <div className="TodosList">
+    //                     <h3 className="TodosTitle">Todos</h3>
+    //                 <ul>
+    //                     {todolist.map((todo) => (
+    //                         <li key={todo.id}>
+    //                             {todo.todo}
+    //                         </li>
+    //                     ))}
+    //                 </ul>
+    //                 </div>
+    //             </Col>
                 
-//                 <Col xs={4} className="text-center">
-//                 <div className="TodosList">
-//                     <h3 className="TodosTitle">In progress</h3>
-//                 </div>
-//                 </Col>
+    //             <Col xs={4} className="text-center">
+    //             <div className="TodosList">
+    //                 <h3 className="TodosTitle">In progress</h3>
+    //             </div>
+    //             </Col>
             
-//                 <Col xs={4} className="text-center">
-//                 <div className="TodosList">
-//                     <h3 className="TodosTitle">Completed</h3>
-//                 </div>
-//                 </Col>
-//             </Row>
-//         </div>
+    //             <Col xs={4} className="text-center">
+    //             <div className="TodosList">
+    //                 <h3 className="TodosTitle">Completed</h3>
+    //             </div>
+    //             </Col>
+    //         </Row>
+    //     </div>
             
-//     </Container>
+    // </Container>
     
 //     );
 // };
