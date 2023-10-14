@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
-import appStyles from "../../App.module.css";
+// import appStyles from "../../App.module.css";
 
 function TodosPage() {
   // Add your logic here
@@ -18,13 +18,6 @@ function TodosPage() {
             <Col xs={4} className="text-center">
                 <div className="TodosList">
                     <h3 className="TodosTitle">Todos</h3>
-                <ul>
-                    {todolist.map((todo) => (
-                        <li key={todo.id}>
-                            {todo.todo}
-                        </li>
-                    ))}
-                </ul>
                 </div>
             </Col>
             
