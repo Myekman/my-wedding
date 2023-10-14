@@ -12,10 +12,13 @@ import Alert from "react-bootstrap/Alert";
 import btnStyles from "../../styles/Button.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useHistory } from "react-router-dom";
+import { useRedirect } from "../../hooks/useRedirect";
 
 
 
 function TodoForm() {
+  useRedirect("loggedOut");
+  
   const [errors, setErrors] = useState({});
 
   const [todoData, setTodoData] = useState({
