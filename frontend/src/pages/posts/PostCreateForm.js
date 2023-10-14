@@ -79,7 +79,7 @@ function PostCreateForm() {
           name="title"
           value={title}
           onChange={handleChange}
-      />
+        />
       </Form.Group>
       {errors?.title?.map((message, idx) => (
         <Alert variant="warning" key={idx}>

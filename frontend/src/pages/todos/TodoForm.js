@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -24,7 +24,6 @@ function TodoForm() {
   });
   const { title, content } = todoData;
 
-  const inputElement = useRef();
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -61,7 +60,6 @@ function TodoForm() {
           type="text"
           name="title"
           value={title}
-          ref={inputElement}
           onChange={handleChange}
         />
       </Form.Group>
@@ -78,7 +76,6 @@ function TodoForm() {
           rows={6}
           name="content"
           value={content}
-          ref={inputElement}
           onChange={handleChange}
         />
       </Form.Group>
