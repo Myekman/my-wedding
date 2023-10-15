@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import { MoreDropdown } from '../../components/MoreDropdown';
 
 const Todo = (props) => {
     const { title, content } = props;
@@ -18,6 +19,9 @@ const Todo = (props) => {
                 <Card.Body>
                     {content}
                 </Card.Body>
+                </Col>
+                <Col>
+                    <MoreDropdown />
                 </Col>
             </Row>
       

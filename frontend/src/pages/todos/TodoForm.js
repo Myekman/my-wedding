@@ -13,11 +13,13 @@ import btnStyles from "../../styles/Button.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useHistory } from "react-router-dom";
 import { useRedirect } from "../../hooks/useRedirect";
+import { useCurrentUser } from "../../context/CurrentUserContext";
 
 
 
 function TodoForm() {
   useRedirect("loggedOut");
+  const currentUser = useCurrentUser();
   
   const [errors, setErrors] = useState({});
 
@@ -44,8 +46,8 @@ function TodoForm() {
     formData.append("content", content);
 
     try {
-      const { data } = await axiosReq.post('/todos/', formData);
-      history.push(`/todos/${data.id}`);
+      await axiosReq.post('/todos/', formData);
+      history.push(`/todos/${currentUser?.profile_id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
