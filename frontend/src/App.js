@@ -17,8 +17,10 @@ import ProfilePage from './pages/profiles/ProfilePage';
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+
 import TodoForm from "./pages/todos/TodoForm";
 import TodoPage from './pages/todos/TodoPage';
+import TodoEdit from "./pages/todos/TodoEdit";
 
 
 function App() {
@@ -66,6 +68,7 @@ function App() {
               
               <Route exact path="/todos/create" render = {() => <TodoForm />} />
               <Route exact path="/todos/:id" render = {() => <TodoPage /> } />
+              <Route exact path="/todos/:id/edit" render={() => <TodoEdit />} />
 
               <Route
                 exact

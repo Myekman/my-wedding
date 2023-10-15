@@ -35,15 +35,16 @@ const NavBar = () => {
         >
             <i className="far fa-plus-square"></i>Add post
         </NavLink>
+        
     );
+    
     const loggedInIcons = (
         <>
         <NavLink
             className={styles.NavLink}
-            activeClassName={styles.Active}
-            to="/todos/create"
+            to={`/todos/${currentUser?.profile_id}`}
         >
-         <i className="far fa-plus-square"></i>Add todo
+            <i className="fa-solid fa-pencil"></i>My todos
         </NavLink>
         <NavLink
             className={styles.NavLink}
@@ -68,7 +69,6 @@ const NavBar = () => {
             to={`/profiles/${currentUser?.profile_id}`}
         >
             <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
-            {/* <img src={currentUser?.profile_image} alt="profile" /> */}
         </NavLink>
         </>
     );
@@ -110,14 +110,14 @@ const NavBar = () => {
                 aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto text-left">
-                <NavLink
+                {/* <NavLink
                     // the 'exact' prop prevent the home icon to be active when leaving the homepage
                     exact
                     className={styles.NavLink}
                     activeClassName={styles.Active}
                     to="/">
                     <i className = "fas fa-home"></i>Home
-                </NavLink>
+                </NavLink> */}
                 
                 {currentUser  ? loggedInIcons : loggedOutIcons}
                 </Nav>

@@ -9,7 +9,11 @@ import Todo from "./Todo";
 import { Button } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import NoResults from "../../assets/no-results.png"
-// import appStyles from "../../App.module.css";
+
+import btnStyles from "../../styles/Button.module.css";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
+
 
 function TodoPage({ message }) {
   const { id } = useParams();
@@ -25,7 +29,6 @@ useEffect(() => {
         ]);
         setTodos(todos);
         setHasLoaded(true)
-        console.log(todos)
       } catch (err) {
         console.log(err);
       }
@@ -35,14 +38,12 @@ useEffect(() => {
     handleMount();
   }, [id, pathname ]);
 
-  console.log(todos)
-
   return (
     <Row className="h-100">
-    <Col className="py-2 p-0 p-lg-2" lg={8} xl={9}>
+    <Col>
 
       <Link to="/todos/create">
-        <Button>
+        <Button className={`${btnStyles.Button} ${btnStyles.Green}`}>
           Add todo
         </Button>
       </Link>
@@ -50,9 +51,17 @@ useEffect(() => {
       {hasLoaded ? (
         <>
         {todos.results.length ? (
-          todos.results?.map((todo) => (
-            <Todo key={todo.id} {...todo} setTodos={setTodos} />
-          ))
+        <InfiniteScroll
+          children={
+              todos.results?.map((todo) => (
+                <Todo key={todo.id} {...todo} setTodos={setTodos} />
+              ))}
+              dataLength={todos.results.length}
+              loader={<Asset spinner />}
+              hasMore={!!todos.next}
+              next={() => fetchMoreData(todos, setTodos)}
+                
+        />
         ) : (
           <Container>
           <Asset src={NoResults} message={message} />

@@ -16,6 +16,10 @@ const Todo = (props) => {
         console.log(err);
         }
     };
+
+    const handleEdit = async () => {
+        history.push(`/todos/${id}/edit`);
+      };
     
     return (
         <Container>
@@ -33,6 +37,7 @@ const Todo = (props) => {
                 <Col>
                     <MoreDropdown 
                      handleDelete={handleDelete}
+                     handleEdit={handleEdit}
                     />
                 </Col>
             </Row>
