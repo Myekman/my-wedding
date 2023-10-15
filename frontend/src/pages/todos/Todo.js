@@ -1,11 +1,21 @@
 import React from 'react'
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { MoreDropdown } from '../../components/MoreDropdown';
+import { axiosRes } from '../../api/axiosDefaults';
+import { useHistory } from 'react-router-dom';
 
 const Todo = (props) => {
-    const { title, content } = props;
-
-
+    const { title, content, id } = props;
+    const history = useHistory();
+    
+    const handleDelete = async () => {
+        try {
+        await axiosRes.delete(`/todos/${id}/`);
+        history.goBack();
+        } catch (err) {
+        console.log(err);
+        }
+    };
     
     return (
         <Container>
@@ -21,7 +31,9 @@ const Todo = (props) => {
                 </Card.Body>
                 </Col>
                 <Col>
-                    <MoreDropdown />
+                    <MoreDropdown 
+                     handleDelete={handleDelete}
+                    />
                 </Col>
             </Row>
       
