@@ -18,12 +18,8 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import TodoForm from "./pages/todos/TodoForm";
+import TodoPage from './pages/todos/TodoPage';
 import TodosPage from './pages/todos/TodosPage';
-
-// import PlannerTodoForm from './pages/todos/PlannerTodoForm';
-// import TodoCreateForm from './pages/todo/TodoCreateForm';
-
-
 
 
 function App() {
@@ -70,7 +66,11 @@ function App() {
               <Route exact path="/profiles/:id" render = {() => <ProfilePage />} />
               
               <Route exact path="/todos/create" render = {() => <TodoForm />} />
-              <Route exact path="/todos/:id" render = {() => <TodosPage /> } />
+              <Route exact path="/todos/:id" render = {() => <TodoPage /> } />
+              <Route exact path="/todos" render={() => <TodosPage
+                message="No results found"
+                filter={currentUser}
+              />} />
 
               <Route
                 exact
