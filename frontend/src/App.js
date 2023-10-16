@@ -67,7 +67,9 @@ function App() {
               <Route exact path="/profiles/:id" render = {() => <ProfilePage />} />
               
               <Route exact path="/todos/create" render = {() => <TodoForm />} />
-              <Route exact path="/todos/:id" render = {() => <TodoPage /> } />
+              <Route exact path="/todos/:id" render = {() => 
+                <TodoPage 
+                  message="You have no todos right now, add a todo!"/> } />
               <Route exact path="/todos/:id/edit" render={() => <TodoEdit />} />
 
               <Route
