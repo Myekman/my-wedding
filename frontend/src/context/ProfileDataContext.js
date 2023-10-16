@@ -43,7 +43,7 @@ export const ProfileDataProvider = ({ children }) => {
         }
       };
 
-      const handleunfollow = async (clickedProfile) => {
+      const handleUnfollow = async (clickedProfile) => {
         try {
           await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
           setProfileData((prevState) => ({
@@ -87,7 +87,7 @@ export const ProfileDataProvider = ({ children }) => {
 
     return (
         <ProfileDataContext.Provider value={profileData}>
-            <SetProfileDataContext.Provider value={{ setProfileData, handleFollow, handleunfollow }}>
+            <SetProfileDataContext.Provider value={{ setProfileData, handleFollow, handleUnfollow }}>
                 {children}
             </SetProfileDataContext.Provider>
         </ProfileDataContext.Provider>

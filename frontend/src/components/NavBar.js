@@ -42,6 +42,7 @@ const NavBar = () => {
         <>
         <NavLink
             className={styles.NavLink}
+            activeClassName={styles.Active}
             to={`/todos/${currentUser?.profile_id}`}
         >
             <i className="fa-solid fa-pencil"></i>My todos

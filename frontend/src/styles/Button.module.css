@@ -41,15 +41,13 @@
   
   .BlueOutline,
   .Blue:hover {
-    /* border: 1px solid #2142b2; */
+    border: 1px solid #2142b2;
     background-color: #ffffff;
     color: #032002
   }
   
   .Black,
   .BlackOutline:hover {
-    /* background-color: #242a3d;
-    color: white; */
     background-color: #242a3d;
     color: aliceblue;
   }
