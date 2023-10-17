@@ -58,7 +58,7 @@ This pages has the same design but the it display's diffrent kinds of posts. Fee
 
 ![Add post page](./mywedding/readme/addposts.pp5.png)
 
-![Todo page & TodoForm](./mywedding/readme/todopage.feature.png)
+![Todo page & TodoForm](./mywedding/readme/todopage.ppg.png)
 
 
 # Design
