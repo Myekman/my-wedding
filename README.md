@@ -155,8 +155,12 @@ Images that is uploaded are imported frpn [Pexles](#https://www.pexels.com/)
 
 </details>
 
+<details>
+<summary>Like and comment</summary>
 
+![Like and comment](../my-wedding/readme/like.comment.feature.png)
 
+</details>
 
 # Future features & improvments
 
