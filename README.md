@@ -6,7 +6,7 @@ My Wedding Planner is an image sharing and networking platform for weddings. As 
 
 ![my wedding](./mywedding/readme/amiresponsive.png)
 
-### Live wedsite here: [My Wedding Planner](https://my-wedding-planner-300e07d6f1f5.herokuapp.com/)
+##### Live website here: [My Wedding Planner](https://my-wedding-planner-300e07d6f1f5.herokuapp.com/)
 
 - [Project](#project)
 - [User Experience](#user-experience-ux)
