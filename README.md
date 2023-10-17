@@ -55,9 +55,9 @@ This pages has the same design but the it display's diffrent kinds of posts. Fee
 
 [Home,Feed,Liked](../my-wedding/readme/homepage.pp5.png)
 
-[ProfilePage](../my-wedding/readme/profilepage.ppg.png)
+[ProfilePage](../my-wedding/readme/profilepage.pp5.png)
 
-[Add post page](../my-wedding/readme/addposts.ppf.png)
+[Add post page](../my-wedding/readme/addposts.pp5.png)
 
 [Todo page & TodoForm](../my-wedding/readme/todopage.ppg.png)
 
@@ -76,7 +76,7 @@ to achieve a romantic feeling.
 Images that is uploaded are imported frpn [Pexles](#https://www.pexels.com/)
 
 
-# Featues
+# Features
 
 <details>
 <summary>Home page</summary>
