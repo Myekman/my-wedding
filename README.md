@@ -51,13 +51,12 @@ Wireframes created using [Balsamiq](https://balsamiq.com/) to plan the general d
 
 #### Homepage / feed / Liked posts
 This pages has the same design but the it display's diffrent kinds of posts. Feed is only displaying posts from the profiles i follow. Homepage displays all posts and liked displays all liked posts from the logged in profile. 
-
 ![Home,Feed,Liked](./mywedding/readme/homepage.pp5.png)
-
+#### Profile page
 ![ProfilePage](./mywedding/readme/profilepage.pp5.png)
-
+#### Add posts page
 ![Add post page](./mywedding/readme/addposts.pp5.png)
-
+#### Todo page and Todo form
 ![Todo page & TodoForm](./mywedding/readme/todopage.ppg.png)
 
 
