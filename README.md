@@ -49,15 +49,34 @@ To plan the project GitHub issues was used to write all User Stories and also Bu
 ### Wireframes
 Wireframes created using [Balsamiq](https://balsamiq.com/) to plan the general design on lager and smaller screen sizes. 
 
-#### Homepage / feed / Liked posts
-This pages has the same design but the it display's diffrent kinds of posts. Feed is only displaying posts from the profiles i follow. Homepage displays all posts and liked displays all liked posts from the logged in profile. 
+<details>
+<summary>Home / Feed / Liked </summary>
+This pages has the same design but the it display's diffrent kinds of posts. Feed is only displaying posts from the profiles i follow. Homepage displays all posts and liked displays all liked posts from the logged in profile.
+
 ![Home,Feed,Liked](./mywedding/readme/homepage.pp5.png)
-#### Profile page
+
+</details>
+
+<details>
+<summary>Profile page</summary>
+
 ![ProfilePage](./mywedding/readme/profilepage.pp5.png)
-#### Add posts page
+
+</details>
+
+<details>
+<summary>Add post</summary>
+
 ![Add post page](./mywedding/readme/addposts.pp5.png)
-#### Todo page and Todo form
+
+</details>
+
+<details>
+<summary>Add todo</summary>
+
 ![Todo page & TodoForm](./mywedding/readme/todopage.ppg.png)
+
+</details>
 
 
 # Design
