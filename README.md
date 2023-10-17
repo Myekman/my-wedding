@@ -4,7 +4,7 @@
 
 My Wedding Planner is an image sharing and networking platform for weddings. As a future bride and groom, you can find inspiration for your big day. The site is also perfect for wedding photographers and florists as their work is perfect for the target audience of the site. As a photographer, you can market yourself and find many new clients.
 
-![my wedding](../my-wedding/readme/amiresponsive.png)
+![my wedding](./mywedding/readme/amiresponsive.png)
 
 ### Live wedsite here: [My Wedding Planner](https://my-wedding-planner-300e07d6f1f5.herokuapp.com/)
 
@@ -80,84 +80,84 @@ Images that is uploaded are imported frpn [Pexles](#https://www.pexels.com/)
 <details>
 <summary>Home page</summary>
 
-![Home page](../my-wedding/readme/home.feature.png)
+![Home page](./mywedding/readme/home.feature.png)
 
 </details>
 
 <details>
 <summary>Feed</summary>
 
-![Feed](../my-wedding/readme/feed.feature.png)
+![Feed](./mywedding/readme/feed.feature.png)
 
 </details>
 
 <details>
 <summary>Liked with (No results)</summary>
 
-![Liked](../my-wedding/readme/liked.notfound.png)
+![Liked](./mywedding/readme/liked.notfound.png)
 
 </details>
 
 <details>
 <summary>Profilepage</summary>
 
-![Profilepage](../my-wedding/readme/profilepage.feature.png)
+![Profilepage](./mywedding/readme/profilepage.feature.png)
 
 </details>
 
 <details>
 <summary>Add post</summary>
 
-![Add Post](../my-wedding/readme/addpost.feature.png)
+![Add Post](./mywedding/readme/addpost.feature.png)
 
 </details>
 
 <details>
 <summary>Edit post</summary>
 
-![Edit Post](../my-wedding/readme/editpost.feature.png)
+![Edit Post](./mywedding/readme/editpost.feature.png)
 
 </details>
 
 <details>
 <summary>My Todos</summary>
 
-![My Todos](../my-wedding/readme/todopage.feature.png)
+![My Todos](./mywedding/readme/todopage.feature.png)
 
 </details>
 
 <details>
 <summary>Add Todo</summary>
 
-![Add Todo](../my-wedding/readme/todoform.new.png)
+![Add Todo](./mywedding/readme/todoform.new.png)
 
 </details>
 
 <details>
 <summary>Edit Todo</summary>
 
-![Edit Todo](../my-wedding/readme/edittodo.new.png)
+![Edit Todo](./mywedding/readme/edittodo.new.png)
 
 </details>
 
 <details>
 <summary>Navbar</summary>
 
-![Navbar](../my-wedding/readme/navbar.new.png)
+![Navbar](./mywedding/readme/navbar.new.png)
 
 </details>
 
 <details>
 <summary>Follow / Unfollow</summary>
 
-![follow/unfollow](../my-wedding/readme/follow.feature.png)
+![follow/unfollow](./mywedding/readme/follow.feature.png)
 
 </details>
 
 <details>
 <summary>Like and comment</summary>
 
-![Like and comment](../my-wedding/readme/like.comment.feature.png)
+![Like and comment](./mywedding/readme/like.comment.feature.png)
 
 </details>
 
@@ -249,7 +249,7 @@ JSX code have manually been validated and adjusted throughout development via di
 ### Lighthouse
 
 My Wedding have been tested using Chrome developer lighthouse tester. 
-[lighthouse](../my-wedding/readme/lighthouse.p55.png)
+[lighthouse](./mywedding/readme/lighthouse.p55.png)
 
 # Development & Installations
 
@@ -269,7 +269,7 @@ regularly:
 ### The Backend
 The project contains both backend and frontend code but i started with building the backend API with Django-Rest-Framework.
 <br>
-The Structure and relationship between the models in the backend can you view here: [Models Relationship](../my-wedding/readme/relations.model.png)
+The Structure and relationship between the models in the backend can you view here: [Models Relationship](./mywedding/readme/relations.model.png)
 
 This are the steps to begin a new project:
 - pip3 install 'django<4'
