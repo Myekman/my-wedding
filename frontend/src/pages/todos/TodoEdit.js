@@ -12,8 +12,10 @@ import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useCurrentUser } from "../../context/CurrentUserContext";
 
 function TodoEdit() {
+  const currentUser = useCurrentUser();
   const [errors, setErrors] = useState({});
 
   const [todoData, setTodoData] = useState({
@@ -30,7 +32,7 @@ function TodoEdit() {
       try {
         const { data } = await axiosReq.get(`/todos/${id}/`);
         const { title, content, is_owner } = data;
-
+        
         is_owner ? setTodoData({ title, content }) : history.push("/");
       } catch (err) {
         console.log(err);
@@ -57,7 +59,7 @@ function TodoEdit() {
 
     try {
       await axiosReq.put(`/todos/${id}/`, formData);
-      history.push(`/todos/${id}`);
+      history.push(`/todos/${currentUser?.profile_id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {

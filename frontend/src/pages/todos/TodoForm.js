@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import btnStyles from "../../styles/Button.module.css";
 import logo from "../../assets/logo.png"
-// import Upload from "../../assets/upload.png";
+
 import { axiosReq } from "../../api/axiosDefaults";
 import { Link, useHistory } from "react-router-dom";
 import { useRedirect } from "../../hooks/useRedirect";
