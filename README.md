@@ -5,6 +5,7 @@
 
 My Wedding Planner is an image sharing and networking platform for weddings. As a future bride and groom, you can find inspiration for your big day. The site is also perfect for wedding photographers and florists as their work is perfect for the target audience of the site. As a photographer, you can market yourself and find many new clients.
 
+![my wedding](../my-wedding/readme/amiresponsive.png)
 
 ### Live wedsite here: [My Wedding Planner](https://my-wedding-planner-300e07d6f1f5.herokuapp.com/)
 
@@ -52,13 +53,13 @@ Wireframes created using [Balsamiq](https://balsamiq.com/) to plan the general d
 #### Homepage / feed / Liked posts
 This pages has the same design but the it display's diffrent kinds of posts. Feed is only displaying posts from the profiles i follow. Homepage displays all posts and liked displays all liked posts from the logged in profile. 
 
-[Home,Feed,Liked](src/assets/readme/homepage.pp5.png)
+[Home,Feed,Liked](../my-wedding/readme/homepage.pp5.png)
 
-[ProfilePage](src/assets/readme/profilepage.ppg.png)
+[ProfilePage](../my-wedding/readme/profilepage.ppg.png)
 
-[Add post page](src/assets/readme/addposts.ppf.png)
+[Add post page](../my-wedding/readme/addposts.ppf.png)
 
-[Todo page & TodoForm](src/assets/readme/todopage.ppg.png)
+[Todo page & TodoForm](../my-wedding/readme/todopage.ppg.png)
 
 
 # Design
@@ -76,6 +77,62 @@ Images that is uploaded are imported frpn [Pexles](#https://www.pexels.com/)
 
 
 # Featues
+
+<details>
+<summary>Home page</summary>
+
+![Home page](../my-wedding/readme/home.feature.png)
+
+</details>
+
+<details>
+<summary>Feed</summary>
+
+![Feed](../my-wedding/readme/feed.feature.png)
+
+</details>
+
+<details>
+<summary>Liked with (No results)</summary>
+
+![Liked](../my-wedding/readme/liked.notfound.png)
+
+</details>
+
+<details>
+<summary>Profilepage</summary>
+
+![Profilepage](../my-wedding/readme/profilepage.feature.png)
+
+</details>
+
+[Add post]()
+[Specific post page]()
+[Edit post page]()
+
+<details>
+<summary>My Todos</summary>
+
+![My Todos](../my-wedding/readme/todopage.feature.png)
+
+</details>
+
+<details>
+<summary>Add Todo</summary>
+
+![Add Todo](../my-wedding/readme/todoform.feature.png)
+
+</details>
+
+<details>
+<summary>Edit Todo</summary>
+
+![Edit Todo](../my-wedding/readme/Edittodo.feature.png)
+
+</details>
+
+[Navbar]()
+
 
 # Future features & improvments
 
@@ -165,7 +222,7 @@ JSX code have manually been validated and adjusted throughout development via di
 ### Lighthouse
 
 My Wedding have been tested using Chrome developer lighthouse tester. 
-[lighthouse](src/assets/readme/lighthouse.p55.png)
+[lighthouse](../my-wedding/readme/lighthouse.p55.png)
 
 # Development & Installations
 
@@ -185,7 +242,7 @@ regularly:
 ### The Backend
 The project contains both backend and frontend code but i started with building the backend API with Django-Rest-Framework.
 <br>
-The Structure and relationship between the models in the backend can you view here: [Models Relationship](src/assets/readme/relations.model.png)
+The Structure and relationship between the models in the backend can you view here: [Models Relationship](../my-wedding/readme/relations.model.png)
 
 This are the steps to begin a new project:
 - pip3 install 'django<4'
