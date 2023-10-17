@@ -106,9 +106,19 @@ Images that is uploaded are imported frpn [Pexles](#https://www.pexels.com/)
 
 </details>
 
-[Add post]()
-[Specific post page]()
-[Edit post page]()
+<details>
+<summary>Add post</summary>
+
+![Add Post](../my-wedding/readme/addpost.feature.png)
+
+</details>
+
+<details>
+<summary>Edit post</summary>
+
+![Edit Post](../my-wedding/readme/editpost.feature.png)
+
+</details>
 
 <details>
 <summary>My Todos</summary>
@@ -120,18 +130,32 @@ Images that is uploaded are imported frpn [Pexles](#https://www.pexels.com/)
 <details>
 <summary>Add Todo</summary>
 
-![Add Todo](../my-wedding/readme/todoform.feature.png)
+![Add Todo](../my-wedding/readme/todoform.new.png)
 
 </details>
 
 <details>
 <summary>Edit Todo</summary>
 
-![Edit Todo](../my-wedding/readme/Edittodo.feature.png)
+![Edit Todo](../my-wedding/readme/edittodo.new.png)
 
 </details>
 
-[Navbar]()
+<details>
+<summary>Navbar</summary>
+
+![Navbar](../my-wedding/readme/navbar.new.png)
+
+</details>
+
+<details>
+<summary>Follow / Unfollow</summary>
+
+![follow/unfollow](../my-wedding/readme/follow.feature.png)
+
+</details>
+
+
 
 
 # Future features & improvments

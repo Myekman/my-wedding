@@ -6,12 +6,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
-// import Upload from "../../assets/upload.png";
-
-// import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import logo from "../../assets/logo.png"
+// import Upload from "../../assets/upload.png";
 import { axiosReq } from "../../api/axiosDefaults";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useRedirect } from "../../hooks/useRedirect";
 import { useCurrentUser } from "../../context/CurrentUserContext";
 
@@ -90,12 +89,12 @@ function TodoForm() {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${btnStyles.Button} ${btnStyles.Green}`}
         onClick={() => history.goBack()}
       >
         cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+      <Button className={`${btnStyles.Button} ${btnStyles.Green}`} type="submit">
         create
       </Button>
     </div>
@@ -103,14 +102,17 @@ function TodoForm() {
 
   return (
     <Container>
-        <h3 className="text-center">My Todos</h3>
+        <h3 className="text-center">Add a todo</h3>
         <Form  onSubmit={handleSubmit}>
         <Row>
             <Col sx={5} lg={6}>
             <Container>{textFields}</Container>
             </Col>
             <Col lg={6} className="text-center mt-5">
-                 image here
+            <Link to={`/todos/${currentUser?.profile_id}`}>
+            <img src={logo} alt="logo" height="90" />
+            </Link>
+            <p>View all todos, click the icon</p>
             </Col>
         </Row>
         </Form>
